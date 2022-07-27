@@ -164,6 +164,7 @@ const signal = 'red';
 //   console.log('Go!');
 // }
 
+/*
 switch (signal) {
   case 'red':
     console.log('Stop!');
@@ -178,4 +179,169 @@ switch (signal) {
   default:
     console.log('Wrong signal!');
     break;
+}
+*/
+
+/*
+// for
+
+for (let i = 1; i <= 10; i++) {
+  // console.log('hello');
+  // console.log('hello' + i);
+  console.log(`hello ${i}`); // <- hello1～10を表示できる(``で囲うことに注意)
+}
+*/
+
+/*
+// while
+
+// HPが100あるキャラが15ずつダメージを受ける計算
+// let hp = 100; 
+
+// while (hp > 0) {
+//   console.log(`${hp} HP left!`);
+//   hp -= 15;
+// }
+// 条件に関する処理(今回で言うとhp -= 15;)を書き忘れると無限ループになって最悪PCを再起動することになるので注意
+
+// 最初からマイナスでもHPを表示する方法
+let hp = -50; 
+
+do {
+  console.log(`${hp} HP left!`);
+  hp -= 15;
+} while (hp > 0);
+*/
+
+// continue, break
+/*
+for (let i = 1; i <= 10; i++) {
+  // if (i === 4) {
+  // if (i % 3 === 0) { // %は倍数を表現するのによく使う
+  //   continue; // continueはループを1回スキップするのによく使う
+  // }
+  if (i === 4) {
+    break; // ループを途中で終了させるのに使う
+  }
+  console.log(i);
+}
+*/
+
+/*
+// 関数で処理をまとめる
+
+function showAd() {
+  console.log('----------');
+  console.log('--- Ad ---');
+  console.log('----------');
+} // {}内の内容をまとめることができる。呼び出すときはshowAd();。修正するときも便利。
+
+showAd();
+console.log('Tom is great!');
+console.log('Bob is great!');
+showAd();
+console.log('Steve is great!');
+console.log('Richard is great!');
+showAd();
+*/
+
+// 引数
+/*
+function showAd(message ='Ad') { // 仮引数
+  console.log('----------');
+  console.log(`--- ${message} ---`); // テンプレートリデラル(``)を使用する
+  console.log('----------');
+} // {}内の内容をまとめることができる。呼び出すときはshowAd();。修正するときも便利。
+
+showAd('Header Ad'); // 実引数
+console.log('Tom is great!');
+console.log('Bob is great!');
+// showAd('Ad');
+showAd(); // messageに=Adが事前に設定されているためshowAd();と空欄で入力した場合は自動でAdが付く。
+console.log('Steve is great!');
+console.log('Richard is great!');
+showAd('Footer Ad');
+*/
+
+// returnで値を返す
+/*
+function sum(a, b, c) {
+  // console.log(a + b + c);
+  return a + b + c;
+}
+
+// sum(1, 2, 3);
+// sum(3, 4, 5);
+
+const total = sum(1, 2, 3) + sum(3, 4, 5); // 18
+console.log(total);
+*/
+
+/* 関数式
+
+【関数宣言】
+function 関数名(仮引数, 仮引数, ...) {
+  処理;
+  処理;
+  return 返り値;
+}
+
+【呼び出し】
+関数名(実引数, 実引数, ...);
+
+【関数式】
+const 定数名 = function(仮引数, 仮引数, ...) {  // 関数名がない場合は無名関数と呼ばれる
+  処理;
+  処理;
+  return 返り値;
+};
+
+【呼び出し】
+定数名(実引数, 実引数, ...);
+
+
+const sum = function(a, b, c) {
+  return a + b + c;
+};
+
+const total = sum(1, 2, 3) + sum(3, 4, 5);  // 答えは18
+console.log(total);
+*/
+
+/*
+// アロー関数
+
+// const sum = (a, b, c) =>  a + b + c;
+
+// const total = sum(1, 2, 3) + sum(3, 4, 5);  // 答えは18
+// console.log(total);
+
+// const double = function(a) {
+//   return a * 2;
+// };
+
+const double = (a) => a * 2;
+console.log(double(12));
+*/
+
+/*
+// スコープ
+
+const x = 2;
+
+function f() {
+  // const x = 1  // <- ここに設定が入っていない場合は外の数値が反映される。
+  console.log(x);
+}
+
+f();
+console.log(x);
+*/
+
+// コードブロック
+
+// indexとmsのどちらにもconst xがある場合{}で囲わないとエラーになるので注意
+{
+  const x = 100
+  console.log(x);
 }
