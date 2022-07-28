@@ -339,9 +339,11 @@ console.log(x);
 */
 
 // コードブロック
-
+/*
 // indexとmsのどちらにもconst xがある場合{}で囲わないとエラーになるので注意
 {
   const x = 100
   console.log(x);
 }
+*/
+
