@@ -95,5 +95,28 @@
   // sum(10, 20); と同じ意味になる
 }
 
+/*
 // 分割代入
 
+{
+  const scores = [80, 90, 40, 70];
+
+  // const [a, b, c, d] = scores;
+  // console.log(a); // 80
+  // console.log(b); // 90
+  // console.log(c); // 40
+  // console.log(d); // 70
+
+  // const [a, b, ...others] = scores;
+  //   console.log(a); // 80
+  //   console.log(b); // 90
+  //   console.log(others); // 40, 70
+
+  // 値の交換をするときは以下の通り
+  let x = 30;
+  let y = 70;
+  [x, y] = [y, x];
+  console.log(x);
+  console.log(y);
+}
+*/
